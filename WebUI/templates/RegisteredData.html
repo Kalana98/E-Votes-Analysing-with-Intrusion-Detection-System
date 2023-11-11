@@ -1,0 +1,36 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+
+<section class="about-section py-5">
+    <div class="container py-xl-5 py-sm-3">
+        <h5 class="main-w3l-title mb-sm-4 mb-3">Registered Voters  </h5>
+        <div class="modal-body">
+            <div class="login p-md-5 p-4">
+
+<table id="registered-data" class="display">
+            <thead>
+                <tr>
+                    {% for col in data.columns %}
+                        <th>{{ col }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for index, row in data.iterrows() %}
+                    <tr>
+                        {% for col in data.columns %}
+                            <td>{{ row[col] }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

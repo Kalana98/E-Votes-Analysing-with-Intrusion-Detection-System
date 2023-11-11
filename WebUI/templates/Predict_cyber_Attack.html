@@ -1,0 +1,91 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+
+<section class="about-section py-5">
+    <div class="container py-xl-5 py-sm-3">
+        <h5 class="main-w3l-title mb-sm-4 mb-3">Cyber Attack Prediction</h5>
+        <div class="modal-body">
+            <div class="login p-md-5 p-4">
+                <form method="post">
+                    <div class="form-group">
+                        <label for="IP_address">IP Address:</label>
+   <input value="{{local_ip}}" type="text" class="form-control" id="IP_address" name="IP_address" required oninput="validateIP(this)">
+
+                    </div>
+
+
+                         <div class="form-group">
+      <label for="Time_of_Day">Time of Day:</label>
+            <select class="form-control" id="Time_of_Day" name="Time_of_Day" required>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                 <option value="Evening">Evening</option>
+           <option value="Night">Night</option>
+
+            </select>
+        </div>
+
+                    <div class="form-group">
+                        <label for="Number_of_Packets">Number of Packets:</label>
+                        <input value="{{packets_received}}" type="number" class="form-control" id="Number_of_Packets" name="Number_of_Packets" required>
+                    </div>
+
+
+
+                         <div class="form-group">
+            <label for="Protocol">Protocol:</label>
+            <select class="form-control" id="Protocol" name="Protocol" required>
+                <option value="ICMP">ICMP</option>
+                <option value="TCP">TCP</option>
+                 <option value="UDP">UDP</option>
+                 <option value="HTTP">HTTP</option>
+                      <option value="ICMP">ICMP</option>
+
+            </select>
+        </div>
+
+                    <button type="submit" class="btn btn-primary">Predict</button>
+                           <a href="/Predict_cyber_Attack" class="btn btn-warning">Reset</a>
+                </form>
+
+<br>
+                <center>
+
+    {% if prediction %}  <div class="alert alert-warning" role="alert">
+                <h2>{{ prediction }}</h2>
+                </div>
+                {% endif %}
+
+</center>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function() {
+        $('#Protocol').select2();
+        $('#Protocol').select2();
+        $('#Time_of_Day').select2();
+        $('#Time_of_Day').select2();
+
+
+    });
+
+    function validateIP(input) {
+    const ipRegex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+    const inputValue = input.value;
+    if (ipRegex.test(inputValue)) {
+        input.setCustomValidity('');
+    } else {
+        input.setCustomValidity('Please enter a valid IP address.');
+    }
+}
+</script>
+
+
+{% endblock %}

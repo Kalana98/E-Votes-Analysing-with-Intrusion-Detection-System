@@ -1,0 +1,194 @@
+	
+             
+	
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Election </title>
+	<!-- Meta Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Brisk Biz Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta Tags -->
+	<!-- Style-sheets -->
+	<link href="static/Assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="static/Assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="static/Assets/css/fontawesome-all.css" rel="stylesheet">
+		<link rel="stylesheet" href="static/Assets/css/flexslider.css" type="text/css" media="screen" property="" />
+	<!--// Style-sheets -->
+	<!--web-fonts-->
+	<link href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+	<!--//web-fonts-->
+		    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
+    <!-- Include Select2 library CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Include Select2 library JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.min.js"></script>
+</head>
+
+<body>
+	<!-- banner -->
+ 
+	<section class="banner b1 inner-banner" id="home">
+		<!-- header -->
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light top-header-w3layouts">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+				    aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link ml-lg-0" href="/">Home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/Voter_personage_analyzer">Voter Personage Analyzer </a>
+
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/Predict_cyber_Attack">Predict cyber Attack    </a>
+						</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="/Face">  Face Analysis </a>
+						</li>
+
+
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+							    aria-expanded="false">
+								FaceData
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item text-center" href="/Voter_Register">Register Face </a>
+								<a class="dropdown-item text-center" href="/RegisteredData">Registered Data </a>
+							</div>
+						</li>
+						 
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- //header -->
+		<div class="container">
+			<h3 class="inner-title">Smart Election  Analysis    System</h3>
+		</div>
+	</section>
+	<!-- //banner -->
+	<!-- breadcrumb -->
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="/">Home</a>
+			</li>
+			 
+		</ol>
+	</nav>
+	<!-- //breadcrumb -->
+
+	
+
+					      {% block content %}
+    {% endblock %}
+
+	<!-- copyright -->
+	<div class="copyright-w3layouts">
+		<div class="container">
+			<p class="py-xl-4 py-3">© 2023  All Rights Reserved  
+	
+			</p>
+		</div>
+	</div>
+	<!-- //copyright -->
+	<!-- Login Modal -->
+
+ 	<!-- Required common Js -->
+	<script src='static/Assets/js/jquery-2.2.3.min.js'></script>
+	<!-- //Required common Js -->
+
+	<!-- password-script -->
+	<script>
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+
+	<!-- start-smoth-scrolling -->
+	<script src="static/Assets/js/move-top.js"></script>
+	<script src="static/Assets/js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<!-- here stars scrolling icon -->
+	<script>
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!--js for bootstrap working-->
+	<script src="static/Assets/js/bootstrap.min.js"></script>
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#registered-data').DataTable();
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+
+<section class="about-section py-5">
+    <div class="container py-xl-5 py-sm-3">
+        <h5 class="main-w3l-title mb-sm-12 mb-12">Face Verification </h5>
+        <div class="modal-body">
+            <div class="login p-md-5 p-12">
+             <center>
+			 
+    <img src="{{ url_for('video_feed') }}" width="480" height="480">
+	   </center>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

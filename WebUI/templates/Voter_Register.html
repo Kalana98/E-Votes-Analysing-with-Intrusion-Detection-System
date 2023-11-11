@@ -1,0 +1,37 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+
+<section class="about-section py-5">
+    <div class="container py-xl-5 py-sm-3">
+        <h5 class="main-w3l-title mb-sm-4 mb-3">Voter Register  </h5>
+        <div class="modal-body">
+            <div class="login p-md-5 p-4">
+                <form method="post" action="/capture">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" name="name" id="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number:</label>
+               <input type="text" class="form-control" name="mobile" id="mobile" pattern="[0-9]{10}" required>
+
+                    </div>
+
+                       <div class="form-group">
+                        <label for="mobile">NIC   Number:</label>
+                        <input type="text" class="form-control" name="nic" id="nic" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Start Cam</button>
+                </form>
+<br/>
+                <h5>Note: Press 'c' to capture a frame during the video feed. Press 'q' to quit the program.</h5>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

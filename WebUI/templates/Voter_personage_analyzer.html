@@ -1,0 +1,31 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+
+<section class="about-section py-5">
+    <div class="container py-xl-5 py-sm-3">
+        <h5 class="main-w3l-title mb-sm-4 mb-3">Voter Personage Analyzer</h5>
+        <div class="modal-body">
+            <div class="login p-md-5 p-4">
+
+                  <form action="/Voter_personage_analyzer" method="POST" enctype="multipart/form-data">
+                       <center>  <label for="file">Uplload New Voter Review File  :</label>
+                      	<br>	<br>
+
+                <input type="file" name="file" accept=".csv" class="btn btn-primary submit mb-12">
+                      <br>
+   <br>   <br>
+                <input type="submit" value="Analyze" class="btn btn-warning submit mb-12">
+
+            </form>
+
+{% if percentage_likely_to_vote %}
+    <p>Percentage likely to vote: {{ percentage_likely_to_vote|float|round(2) }}%</p>
+{% endif %}
+   </center>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
